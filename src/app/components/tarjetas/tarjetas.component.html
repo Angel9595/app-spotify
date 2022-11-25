@@ -1,0 +1,15 @@
+
+
+<div style=" width: 100%; margin-left: 55px; padding: 10px; " >
+  <div fxLayout="row wrap"  fxLayout.lt-md="column" fxLayoutGap="10px grid">
+    <div (click)="verArtista(item)" *ngFor="let item of items" class="card" style="margin: 8px;" fxFlex="15" fxFlex.lt-md="100">
+      <img  class="card-img-top" [src]="item.images | noimage" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">
+          <span  *ngFor="let artista of item.artists" class="badge bg-warning text-dark">{{artista.name}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
